@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 import re
 import sys
 import json
@@ -22,7 +23,7 @@ for entry in info["node"]["nodes"]:
     value = json.loads(entry["value"])
     ip = value["COREOS_PUBLIC_IPV4"]
     port = value["http"]
-    print "http://%s:%d"%(ip, port)
+    print("http://%s:%d"%(ip, port))
 
 sys.exit(0)
 
